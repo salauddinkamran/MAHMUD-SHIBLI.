@@ -20,6 +20,15 @@
     tailwind.config = {
       theme: {
 
+        container: {
+            screens: {
+                'sm': '95%',
+                'md': '95%',
+                'lg': '1024px',
+                'xl': '1326px',
+            }
+        }, 
+
       fontFamily: {
         mono: [ 'JetBrains Mono', 'monospace'],
         inter: ['Inter', 'sans-serif'],
@@ -30,6 +39,7 @@
         
       }
       },
+
     }
   </script>
 </head>
@@ -37,119 +47,169 @@
 
 
   <!-- header section start -->
-
   <header class="mb-[8px]">
     <div class="container mx-auto">
-      <div class="flex justify-between items-center">
+      <nav class="px-5 relative lg:flex lg:justify-between lg:items-center lg:px-0">
         <div class=" h-[100px] w-[200px] p-[20px] bg-[#121314]">
           <a href="#" class="text-[24px] text-white leading-[26px] font-bold">MAHMUD <br> SHIBLI.</a>
         </div>
-        <nav class="flex justify-between items-center">
-          <ul class="grid grid-flow-col gap-[32px]">
-            <li><a href="#" class="text-[#424E60] font-mono font-semibold py-[8px] px-[16px] hover:bg-[#35695D] hover:text-white duration-300">Home</a></li>
-            <li><a href="#" class="text-[#424E60] font-mono font-semibold py-[8px] px-[16px] hover:bg-[#35695D] hover:text-white duration-300">Services</a></li>
-            <li><a href="#" class="text-[#424E60] font-mono font-semibold py-[8px] px-[16px] hover:bg-[#35695D] hover:text-white duration-300">Qualifications</a></li>
-            <li><a href="#" class="text-[#424E60] font-mono font-semibold py-[8px] px-[16px] hover:bg-[#35695D] hover:text-white duration-300">Events</a></li>
-            <li><a href="#" class="text-[#424E60] font-mono font-semibold py-[8px] px-[16px] hover:bg-[#35695D] hover:text-white duration-300">Testimoinial</a></li>
-          </ul>
-          <button class="bg-[#35695D] text-[14px] text-white py-[8px] px-[24px] font-bold font-mono ml-12 border-2 border-[#35695D] hover:bg-transparent hover:text-[#424E60] hover:border-[#35695D] duration-300">
+        <ul class="duration-300 grid grid-flow-row gap-[15px] bg-[#fff] pb-[20px] shadow-[0_8px_30px_#687E9F40] absolute lg:relative -top-[500%] left-0 w-[95%] mx-5  lg:grid lg:grid-flow-col lg:w-auto lg:shadow-none  lg:mx-0">
+          <li class="px-[16px] hover:bg-[#35695D]"><a href="#" class="block text-[#424E60] hover:text-white font-mono font-semibold py-[8px] duration-300">Home</a></li>
+          <li class="px-[16px] hover:bg-[#35695D]"><a href="#" class="block text-[#424E60] hover:text-white font-mono font-semibold py-[8px] duration-300">Services</a></li>
+          <li class="px-[16px] hover:bg-[#35695D]"><a href="#" class="block text-[#424E60] hover:text-white font-mono font-semibold py-[8px] duration-300">Qualifications</a></li>
+          <li class="px-[16px] hover:bg-[#35695D]"><a href="#" class="block text-[#424E60] hover:text-white font-mono font-semibold py-[8px] duration-300">Events</a></li>
+          <li class="px-[16px] hover:bg-[#35695D]"><a href="#" class="block text-[#424E60] hover:text-white font-mono font-semibold py-[8px] duration-300">Testimoinial</a></li>
+          <button class="bg-[#35695D] text-[14px] text-white py-[8px] px-[24px] font-bold font-mono border-2 border-[#35695D] hover:bg-transparent hover:text-[#424E60] hover:border-[#35695D] duration-300 mr-5 w-[300px] lg:w-auto lg:ml-[40px]">
             Make An Appoinment
           </button>
-        </nav>
-      </div>
+        </ul>
+        <button class="absolute top-[25px] right-[20px] lg:hidden">
+          <i onclick="Menu(this)" class="fa-solid fa-bars text-[30px] text-[#424E60]"></i>
+        </button>
+      </nav>
     </div>
   </header>
-
   <!-- header section end -->
 
 
   <!-- hero section start -->
-
   <section class="bg-[#A4F4D1] h-full mb-[120px]">
-    <div class="container mx-auto">
-      <div class="flex justify-between items-center">
-        <div class="w-1/2">
-          <h5 class="text-[#132238] text-[24px] font-semibold font-mono">💉 MAHMUDUL HASAN SIDDIQI SHIBLI</h5>
-          <h2 class="text-[#132238] text-[60px] font-mono font-bold leading-[60px] mt-[20px] mb-[40px]">20+ Years of Ophthalmology.</h2>
-          <p class="font-inter text-[#132238] text-[20px] font-medium">A beacon in the field of Ophthalmology ,stands as a distinguished figure specializing in Vitro retina ,Retinopathy of Prematurity and  Phaco emulsification  Surgery.</p>
+    <div class="container mx-auto px-5">
+      <div class="pt-10 lg:flex lg:justify-between lg:items-center">
+        <div class="">
+          <h5 class="text-[#132238] text-[18px] sm:text-[20px] md:text-[24px] font-semibold font-mono">💉 MAHMUDUL HASAN SIDDIQI SHIBLI</h5>
+          <h2 class="text-[#132238] text-[36px] leading-[45px] sm:text-[48px] md:text-[60px] sm:leading-[60px] font-mono font-bold mt-[20px] mb-[40px]">20+ Years of Ophthalmology.</h2>
+          <p class="font-inter text-[#132238] text-[16px] font-medium">A beacon in the field of Ophthalmology ,stands as a distinguished figure specializing in Vitro retina ,Retinopathy of Prematurity and  Phaco emulsification  Surgery.</p>
           <div class="mt-[40px]">
-            <button class="mr-[24px] bg-[#35695D] border-2 border-[#35695D] text-white font-mono font-bold w-[240px] h-[64px] hover:bg-white hover:text-[#35695D] duration-300">book an Appoinment</button>
+            <button class="mb-[24px] sm:mb-0 sm:mr-[24px] bg-[#35695D] border-2 border-[#35695D] text-white font-mono font-bold w-[240px] h-[64px] hover:bg-white hover:text-[#35695D] duration-300">book an Appoinment</button>
             <button class="bg-white border-2 border-[#35695D] text-[#35695D] font-mono font-bold w-[240px] h-[64px] hover:bg-[#35695D] hover:text-white duration-300">learn about Me</button>
           </div>
         </div>
-        <div class="w-1/2">
+        <div class="mt-[60px]">
           <img src="./assets/img/hero-section-img.png" alt="">
         </div>
       </div>
     </div>
   </section>
-
   <!-- hero section end -->
+
+  <!-- services seciton start -->
+  <section class="mb-[120px] px-5">
+    <div class="container mx-auto">
+      <div class="relative mb-[70px] md:w-[650px] md:mx-auto">
+        <h2 class="text-[#132238] text-[30px] sm:text-[35px] md:text-[40px] font-mono font-bold mb-[48px] text-center">Services</h2>
+        <div class="w-[200px] h-[1px] bg-[#E6E8EB] absolute top-[40%] sm:top-[50%] left-1/2 -translate-x-1/2"></div>
+        <p class="text-[#556070] text-[14px] sm:text-[16px] md:text-[18px] text-center font-mono">Mauris porttitor eleifend odio, id venenatis orci ornare ac. Nullam id convallis nisl. Sed ullamcorper lacinia suscipit. </p>
+      </div>
+      <div class="lg:flex lg:gap-[25px]">
+        <div class="flex flex-col gap-[25px] sm:flex sm:flex-row sm:mb-[25px] lg:mb-0">
+          <div class="w-full relative sm:w-[49%]">
+            <div>
+              <img class="w-full" src="./assets/img/services-img-1.png" alt="">
+            </div>
+            <div class="absolute bottom-[20px] left-0 p-[20px]">
+              <h4 class="text-[20px] font-bold text-white font-inter mb-20px mb-2">Contact Lens</h4>
+              <p class="text-white text-[14px]">Mauris porttitor eleifend odio, id venenatis Mauris porttitor eleifend </p>
+            </div>
+          </div>
+          <div class="w-full relative sm:w-[49%]">
+            <div>
+              <img class="w-full" src="./assets/img/services-img-2.png" alt="">
+            </div>
+            <div class="absolute bottom-[20px] left-0 p-[20px]">
+              <h4 class="text-[20px] font-bold text-white font-inter mb-20px mb-2">Contact Lens</h4>
+              <p class="text-white text-[14px]">Mauris porttitor eleifend odio, id venenatis Mauris porttitor eleifend </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-[25px] sm:flex sm:flex-row">
+          <div class="w-full relative hidden sm:block sm:w-[49%]">
+            <div>
+              <img class="w-full" src="./assets/img/services-img-1.png" alt="">
+            </div>
+            <div class="absolute bottom-[20px] left-0 p-[20px]">
+              <h4 class="text-[20px] font-bold text-white font-inter mb-20px mb-2">Contact Lens</h4>
+              <p class="text-white text-[14px]">Mauris porttitor eleifend odio, id venenatis Mauris porttitor eleifend </p>
+            </div>
+          </div>
+          <div class="w-full relative hidden sm:block sm:w-[49%]">
+            <div>
+              <img class="w-full" src="./assets/img/services-img-2.png" alt="">
+            </div>
+            <div class="absolute bottom-[20px] left-0 p-[20px]">
+              <h4 class="text-[20px] font-bold text-white font-inter mb-20px mb-2">Contact Lens</h4>
+              <p class="text-white text-[14px]">Mauris porttitor eleifend odio, id venenatis Mauris porttitor eleifend </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- services seciton end -->
 
 
   <!-- Qualification & Awards section start -->
   <section class="mb-[120px]">
-    <div class="container mx-auto">
-      <div class="relative w-[650px] mx-auto mb-[130px]">
-        <h2 class="text-[#132238] text-[40px] font-mono font-bold mb-[48px] text-center">Qualification & Awards</h2>
-        <div class="w-[200px] h-[1px] bg-[#E6E8EB] absolute top-1/2 left-1/2 -translate-x-1/2"></div>
-        <p class="text-[#556070] text-[18px] text-center font-mono">Mauris porttitor eleifend odio, id venenatis orci ornare ac. Nullam id convallis nisl. Sed ullamcorper lacinia suscipit. </p>
+    <div class="container mx-auto px-5">
+      <div class="relative mb-[70px] md:w-[650px] md:mx-auto">
+        <h2 class="text-[#132238] text-[30px] sm:text-[35px] md:text-[40px] font-mono font-bold mb-[48px] text-center">Qualification & Awards</h2>
+        <div class="w-[200px] h-[1px] bg-[#E6E8EB] absolute top-[40%] sm:top-[50%] left-1/2 -translate-x-1/2"></div>
+        <p class="text-[#556070] text-[14px] sm:text-[16px] md:text-[18px] text-center font-mono">Mauris porttitor eleifend odio, id venenatis orci ornare ac. Nullam id convallis nisl. Sed ullamcorper lacinia suscipit. </p>
       </div>
 
-      <div class="flex justify-between items-center gap-[70px]">
-        <div class="w-1/2 relative">
-          <div class="absolute w-full h-[1px] bg-[#E6E8EB] top-0 left-0"></div>
-          <div class="absolute w-full h-[1px] bg-[#E6E8EB] top-[40px] left-0"></div>
-          <div class="absolute w-full h-[1px] bg-[#E6E8EB] top-[80px] left-0"></div>
-
-          <div class="mt-[120px]">
-            <div class="flex justify-between mb-10">
-              <div>
+      <div class="xl:flex xl:justify-between xl:items-center">
+        <div class="relative xl:w-[48%]">
+          <div class="absolute w-full h-[1px] bg-[#E6E8EB] -top-[120px] left-0 hidden xl:block"></div>
+          <div class="absolute w-full h-[1px] bg-[#E6E8EB] -top-[80px] left-0 hidden xl:block"></div>
+          <div class="absolute w-full h-[1px] bg-[#E6E8EB] -top-[40px] left-0 hidden xl:block"></div>
+          <div class="sm:flex sm:justify-between sm:flex-wrap">
+            <div class="mb-10 sm:w-[48%] xl:w-[100%] xl:flex xl:justify-between">
+              <div class="xl:w-[25%]">
                 <h6 class="text-[#1777E5] text-[14px] font-mono font-semibold mb-[8px]">Oxford University</h6>
                 <p class="text-[#697484] text-[12px] font-mono">Jan, 2016 to Jan, 2021</p>
               </div>
-              <div class="w-[500px]">
+              <div class="xl:w-[70%]">
                 <h4 class="text-[#132238] text-[20px] font-mono font-semibold mb-[12px]">Bachelor of Medicine & Bachelor of Surgery
                   (MBBS)</h4>
                 <p class="text-[#464C56] text-[14px] font-mono">Donec ut imperdiet augue, ac rhoncus arcu. In ac mauris commodo, ultrices felis vitae, tempor eros.</p>
               </div>
             </div>
-            <div class="flex justify-between mb-10">
-              <div>
+            <div class="mb-10 sm:w-[48%] xl:w-[100%] xl:flex xl:justify-between">
+              <div class="xl:w-[25%]">
                 <h6 class="text-[#1777E5] text-[14px] font-mono font-semibold mb-[8px]">Oxford University</h6>
                 <p class="text-[#697484] text-[12px] font-mono">Jan, 2016 to Jan, 2021</p>
               </div>
-              <div class="w-[500px]">
+              <div class="xl:w-[70%]">
                 <h4 class="text-[#132238] text-[20px] font-mono font-semibold mb-[12px]">Bachelor of Social Science</h4>
                 <p class="text-[#464C56] text-[14px] font-mono">Integer vel nulla condimentum, tempor risus eu, blandit urna. Quisque fringilla ex in urna pretium.</p>
               </div>
             </div>
-            <div class="flex justify-between mb-10">
-              <div>
+            <div class="mb-10 sm:w-[48%] xl:w-[100%] xl:flex xl:justify-between">
+              <div class="xl:w-[25%]">
                 <h6 class="text-[#1777E5] text-[14px] font-mono font-semibold mb-[8px]">Oxford University</h6>
                 <p class="text-[#697484] text-[12px] font-mono">Jan, 2016 to Jan, 2021</p>
               </div>
-              <div class="w-[500px]">
+              <div class="xl:w-[70%]">
                 <h4 class="text-[#132238] text-[20px] font-mono font-semibold mb-[12px]">Bachelor of Science and Engineering</h4>
                 <p class="text-[#464C56] text-[14px] font-mono">Proin varius diam vitae neque ornare ullamcorper.</p>
               </div>
             </div>
-            <div class="flex justify-between">
-              <div>
+            <div class="sm:w-[48%] xl:w-[100%] xl:flex xl:justify-between">
+              <div class="xl:w-[25%]">
                 <h6 class="text-[#1777E5] text-[14px] font-mono font-semibold mb-[8px]">Oxford University</h6>
                 <p class="text-[#697484] text-[12px] font-mono">Jan, 2016 to Jan, 2021</p>
               </div>
-              <div class="w-[500px]">
+              <div class="xl:w-[70%]">
                 <h4 class="text-[#132238] text-[20px] font-mono font-semibold mb-[12px]">Bachelor of Communication</h4>
                 <p class="text-[#464C56] text-[14px] font-mono">Proin varius diam vitae neque ornare ullamcorper. Maecenas vehicula sem eu dui molestie aliquam.</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="w-1/2">
-          <div class="flex justify-around items-center">
-            <div class="flex flex-col gap-[64px]">
-              <div class="w-[312px] h-[256px] border border-[#A0ABBA] px-[24px] relative">
+        <div class="xl:w-[48%]">
+          <div class="xl:flex xl:justify-between xl:items-center">
+            <div class="sm:flex sm:justify-between gap-[50px] xl:flex xl:flex-col xl:w-[48%]">
+              <div class=" h-[256px] border border-[#A0ABBA] px-[24px] relative mt-[60px] sm:w-[48%] xl:w-full">
                 <div class="flex justify-between items-center absolute -top-[45px] w-[85%]">
                   <img src="./assets/img/Award-1.png" alt="">
                   <h1 class="text-[54px] text-[#ABB1BF] font-semibold font-barlow">01</h1>
@@ -159,7 +219,7 @@
                   <p class="font-mono text-[14px] text-[#697484]">Donec ut imperdiet augue, ac rhoncus arcu. In ac mauris commodo.</p>
                 </div>
               </div>
-              <div class="w-[312px] h-[256px] border border-[#A0ABBA] px-[24px] relative">
+              <div class=" h-[256px] border border-[#A0ABBA] px-[24px] relative mt-[60px] sm:w-[48%] xl:w-full">
                 <div class="flex justify-between items-center absolute -top-[45px] w-[85%]">
                   <img src="./assets/img/Award-3.png" alt="">
                   <h1 class="text-[54px] text-[#ABB1BF] font-semibold font-barlow">03</h1>
@@ -170,9 +230,8 @@
                 </div>
               </div>
             </div>
-
-            <div>
-              <div class="w-[312px] h-[256px] border border-[#A0ABBA] px-[24px] relative">
+            <div class="sm:w-[48%] xl:w-[48%]">
+              <div class=" h-[256px] border border-[#A0ABBA] px-[24px] relative mt-[60px]">
                 <div class="flex justify-between items-center absolute -top-[45px] w-[85%]">
                   <img src="./assets/img/Award-2.png" alt="">
                   <h1 class="text-[54px] text-[#ABB1BF] font-semibold font-barlow">02</h1>
@@ -184,7 +243,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -194,20 +252,20 @@
 
   <!-- Latest Event & Show section start -->
   <section class="py-[100px] bg-[#4D88FF]">
-    <div class="container mx-auto">
-      <div class="flex justify-between items-end mb-[50px]">
-        <div class="w-[550px] relative">
-          <h2 class="text-white text-[40px] font-mono font-bold mb-[48px]">Latest Event & Show</h2>
-          <div class="w-[200px] h-[1px] bg-[#000103] absolute top-1/2 left-0"></div>
-          <p class="text-[18px] font-mono text-white">Donec suscipit dictum risus sed dignissim. Fusce ex leo, lobortis sed ullamcorper in, rutrum eu enim.</p>
+    <div class="container mx-auto px-5">
+      <div class="mb-[50px] md:flex md:justify-between md:items-end">
+        <div class="relative md:w-[650px]">
+          <h2 class="text-white text-[30px] sm:text-[35px] md:text-[40px] font-mono font-bold mb-[48px]">Latest Event & Show</h2>
+          <div class="w-[200px] h-[1px] bg-[#000103] absolute top-[40%] sm:top-[50%] left-0"></div>
+          <p class="text-[14px] sm:text-[16px] md:text-[18px] font-mono text-white">Donec suscipit dictum risus sed dignissim. Fusce ex leo, lobortis sed ullamcorper in, rutrum eu enim.</p>
         </div>
-        <div class="flex gap-[24px]">
-          <i class="fa-solid fa-arrow-left text-[18px] text-white border-2 border-white p-[12px] rounded-full cursor-pointer hover:bg-white hover:text-[#121314] duration-300"></i>
-          <i class="fa-solid fa-arrow-right text-[18px] text-white border-2 border-white p-[12px] rounded-full cursor-pointer hover:bg-white hover:text-[#121314] duration-300"></i>
+        <div class="md:flex gap-[24px] hidden">
+          <i class="fa-solid fa-arrow-left text-[18px] text-white border-2 border-white w-[50px] h-[50px] leading-[50px] text-center rounded-full cursor-pointer hover:bg-white hover:text-[#121314] duration-300"></i>
+          <i class="fa-solid fa-arrow-right text-[18px] text-white border-2 border-white w-[50px] h-[50px] leading-[50px] text-center rounded-full cursor-pointer hover:bg-white hover:text-[#121314] duration-300"></i>
         </div>
       </div>
-      <div class="flex justify-between">
-        <div class="w-[740px] bg-white p-[32px]">
+      <div class="md:flex md:justify-between">
+        <div class=" bg-white p-[20px] mb-[30px] md:mb-0 md:w-[49%]">
           <div class="flex">
             <div class="mr-[24px]">
               <i class="fa-regular fa-calendar text-[#1777E5]"></i>
@@ -221,7 +279,7 @@
           <h3 class="text-[#132238] text-[20px] font-mono font-semibold mt-[12px] mb-[20px]">BMA Events</h3>
           <p class="font-mono text-[#556070] text-[14px]">Quisque vitae ante dolor. Duis vehicula purus eget libero interdum ornare. Vestibulum ut risus nec odio rhoncus malesuada. Duis lobortis consectetur magna, in faucibus mauris congue tempor.</p>
         </div>
-        <div class="w-[740px] bg-white p-[32px]">
+        <div class=" bg-white p-[20px] md:w-[49%]">
           <div class="flex">
             <div class="mr-[24px]">
               <i class="fa-regular fa-calendar text-[#1777E5]"></i>
@@ -243,22 +301,22 @@
 
   <!-- Stories section start -->
   <section class="my-[150px]">
-    <div class="container mx-auto">
-      <div class="flex justify-between items-center">
-        <div class="w-[740px]">
+    <div class="container mx-auto px-5">
+      <div class="md:flex md:justify-between md:items-center">
+        <div class="md:w-[49%]">
           <div class="relative mb-[50px]">
-            <h2 class="text-[#132238] text-[44px] font-mono font-bold leading-[56px] mb-[48px]">863+ Patients Success Stories</h2>
-            <div class="w-[200px] h-[1px] bg-[#7D93B5] absolute top-[65%] left-0"></div>
-            <p class="font-mono text-[#374457]">Mauris porttitor eleifend odio, id venenatis orci ornare ac nullam id convallis nisl.</p>
+            <h2 class="text-[#132238] text-[30px] sm:text-[35px] md:text-[40px] font-mono font-bold leading-[45px] mb-[48px]">863+ Patients Success Stories</h2>
+            <div class="w-[200px] h-[1px] bg-[#7D93B5] absolute top-[50%] lg:top-[60%] left-0"></div>
+            <p class="font-mono text-[14px] sm:text-[16px] md:text-[18px] text-[#374457]">Mauris porttitor eleifend odio, id venenatis orci ornare ac nullam id convallis nisl.</p>
           </div>
-          <div class="flex gap-[24px]">
+          <div class="md:flex gap-[24px] hidden">
             <i class="fa-solid fa-arrow-left text-[18px] border-2 border-[#A4F4D1] p-[12px] rounded-full"></i>
             <i class="fa-solid fa-arrow-right text-[18px] border-2 border-[#A4F4D1] p-[12px] rounded-full"></i>
           </div>
         </div>
-        <div class="w-[740px] bg-[#E8FFE8] p-[56px] border-2 border-[#A4F4D1]">
+        <div class=" bg-[#E8FFE8] p-[20px] md:p-[30px] lg:p-[56px] border-2 border-[#A4F4D1] md:w-[49%]">
           <i class="ri-double-quotes-r text-[40px] text-[#132238]"></i>
-          <p class="text-[#132238] text-[24px] font-mono font-semibold mt-[32px]">When a military doctor tracks down his former fiancee's kidnapped niece, he discovers a complex human trafficking ring in Goa. He then weaves an intricate trap to capture the perpetrators.</p>
+          <p class="text-[#132238] text-[18px] md:text-[20px] lg:text-[24px] font-mono font-semibold mt-[20px]">When a military doctor tracks down his former fiancee's kidnapped niece, he discovers a complex human trafficking ring in Goa. He then weaves an intricate trap to capture the perpetrators.</p>
         </div>
       </div>
     </div>
@@ -268,29 +326,29 @@
 
   <!-- footer section start -->
   <footer class="bg-[#150845]">
-    <div class="container mx-auto">
-      <div class="py-[100px] flex justify-between items-center">
-        <div class="w-[740px]">
-          <h2 class="text-[40px] font-mono font-bold text-white leading-[48px]">Looking for a Ophthalmologist Doctor? Get in touch and let's chat!</h2>
+    <div class="container mx-auto px-5">
+      <div class="py-[80px] md:flex md:justify-between">
+        <div class="mb-[30px]">
+          <h2 class="text-[30px] font-mono font-bold text-white leading-[40px]">Looking for a Ophthalmologist Doctor? Get in touch and let's chat!</h2>
         </div>
-        <div class="w-[740px]">
+        <div class="">
           <p class="text-[18px] text-[#A5ACB5] font-mono mb-[32px]">Donec in bibendum risus. Cras eget imperdiet sapien. Donec sollicitudin maximus augue, non elementum quam ultrices non.</p>
           <button class="bg-[#57FFAE] px-[32px] py-[16px] text-[#132238] font-mono font-bold">Make an appoinment <i class="fa-solid fa-arrow-right-long ml-[10px]"></i></button>
         </div>
       </div>
       <div class="bg-[#2B384C] w-full h-[1px]"></div>
-      <div class="py-[100px] flex justify-between items-center">
-        <div class=" h-[100px] w-[200px] p-[20px] bg-[#fff]">
+      <div class="py-[80px] sm:flex sm:justify-between sm:flex-wrap">
+        <div class=" h-[100px] w-[200px] p-[20px] bg-[#fff] mb-[40px]">
           <a href="#" class="text-[24px] text-[#132238] leading-[26px] font-bold">MAHMUD <br> SHIBLI.</a>
         </div>
-        <div>
+        <div class="mb-[40px] sm:w-[48%] lg:w-[16%]">
           <h3 class="text-[18px] text-white font-mono font-medium uppercase mb-[20px]">Location</h3>
           <p class="text-[#C3C7CE] text-[14px] font-mono">C 287/6 Khilgaon, <br> 
             Dhaka 1319</p>
         </div>
-        <div>
+        <div class="mb-[40px] sm:w-[48%] lg:w-[30%]">
           <h3 class="text-[18px] text-white font-mono font-medium uppercase mb-[20px]">Quick Links</h3>
-          <ul class="flex gap-[20px]">
+          <ul class="lg:flex gap-[10px]">
             <li><a href="#" class="font-mono font-medium text-[#A5ACB5] hover:bg-[#57FFAE] hover:text-[#132238] py-[8px] px-[12px] duration-300">About</a></li>
             <li><a href="#" class="font-mono font-medium text-[#A5ACB5] hover:bg-[#57FFAE] hover:text-[#132238] py-[8px] px-[12px] duration-300">CV</a></li>
             <li><a href="#" class="font-mono font-medium text-[#A5ACB5] hover:bg-[#57FFAE] hover:text-[#132238] py-[8px] px-[12px] duration-300">Events</a></li>
@@ -298,9 +356,9 @@
             <li><a href="#" class="font-mono font-medium text-[#A5ACB5] hover:bg-[#57FFAE] hover:text-[#132238] py-[8px] px-[12px] duration-300">Contact</a></li>
           </ul>
         </div>
-        <div>
+        <div class="sm:w-[48%] lg:w-[25%]">
           <h3 class="text-[18px] text-white font-mono font-medium uppercase mb-[20px]">Follow me</h3>
-          <div class="bg-[#132238]">
+          <div class="bg-[#132238] w-[285px]">
             <a href="#"><i class="fa-brands fa-facebook p-[14px] text-white hover:bg-[#57FFAE] hover:text-[#132238] duration-300"></i></a>
             <a href="#"><i class="fa-brands fa-twitter p-[14px] text-white hover:bg-[#57FFAE] hover:text-[#132238] duration-300"></i></a>
             <a href="#"><i class="fa-brands fa-linkedin p-[14px] text-white hover:bg-[#57FFAE] hover:text-[#132238] duration-300"></i></a>
@@ -317,11 +375,6 @@
     </div>
   </footer>
   <!-- footer section end -->
-
-
-
-
-
 
   <!-- javascript file link -->
   <script src="./assets/js/script.js"></script>

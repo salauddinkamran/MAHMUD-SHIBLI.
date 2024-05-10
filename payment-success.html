@@ -20,18 +20,26 @@
     tailwind.config = {
       theme: {
 
+        container: {
+            screens: {
+                'sm': '95%',
+                'md': '95%',
+                'lg': '1024px',
+                'xl': '1326px',
+            }
+        }, 
+
       fontFamily: {
         mono: [ 'JetBrains Mono', 'monospace'],
         inter: ['Inter', 'sans-serif'],
         barlow: ['Barlow', 'sans-serif'],
-        montserrat: ["Montserrat", 'sans-serif'],
-        lato: ['Lato', 'sans-serif']
         // playFairDisplay: ['Playfair Display', 'serif']
       },
       extend: {
         
       }
       },
+
     }
   </script>
 </head>
@@ -41,39 +49,39 @@
   <!-- header section start -->
   <header class="mb-[8px]">
     <div class="container mx-auto">
-      <div class="flex justify-between items-center">
+      <nav class="px-5 relative lg:flex lg:justify-between lg:items-center lg:px-0">
         <div class=" h-[100px] w-[200px] p-[20px] bg-[#121314]">
           <a href="#" class="text-[24px] text-white leading-[26px] font-bold">MAHMUD <br> SHIBLI.</a>
         </div>
-        <nav class="flex justify-between items-center">
-          <ul class="grid grid-flow-col gap-[32px]">
-            <li><a href="#" class="text-[#424E60] font-mono font-semibold py-[8px] px-[16px] hover:bg-[#FFF0A3] hover:text-[#132238] duration-300">Home</a></li>
-            <li><a href="#" class="text-[#424E60] font-mono font-semibold py-[8px] px-[16px] hover:bg-[#FFF0A3] hover:text-[#132238] duration-300">About</a></li>
-            <li><a href="#" class="text-[#424E60] font-mono font-semibold py-[8px] px-[16px] hover:bg-[#FFF0A3] hover:text-[#132238] duration-300">CV</a></li>
-            <li><a href="#" class="text-[#424E60] font-mono font-semibold py-[8px] px-[16px] hover:bg-[#FFF0A3] hover:text-[#132238] duration-300">Education</a></li>
-            <li><a href="#" class="text-[#424E60] font-mono font-semibold py-[8px] px-[16px] hover:bg-[#FFF0A3] hover:text-[#132238] duration-300">Testimonial</a></li>
-            <li><a href="#" class="text-[#424E60] font-mono font-semibold py-[8px] px-[16px] hover:bg-[#FFF0A3] hover:text-[#132238] duration-300">Article</a></li>
-          </ul>
-          <button class="bg-[#FFD91A] text-[14px] text-[#132238] py-[8px] px-[24px] font-bold font-mono ml-12 border-2 border-[#FFD91A] hover:bg-transparent hover:border-[#132238] duration-300">
+        <ul class="duration-300 grid grid-flow-row gap-[15px] bg-[#fff] pb-[20px] shadow-[0_8px_30px_#687E9F40] absolute lg:relative -top-[500%] left-0 w-[95%] mx-5  lg:grid lg:grid-flow-col lg:w-auto lg:shadow-none  lg:mx-0">
+          <li class="px-[16px] hover:bg-[#35695D]"><a href="#" class="block text-[#424E60] hover:text-white font-mono font-semibold py-[8px] duration-300">Home</a></li>
+          <li class="px-[16px] hover:bg-[#35695D]"><a href="#" class="block text-[#424E60] hover:text-white font-mono font-semibold py-[8px] duration-300">Services</a></li>
+          <li class="px-[16px] hover:bg-[#35695D]"><a href="#" class="block text-[#424E60] hover:text-white font-mono font-semibold py-[8px] duration-300">Qualifications</a></li>
+          <li class="px-[16px] hover:bg-[#35695D]"><a href="#" class="block text-[#424E60] hover:text-white font-mono font-semibold py-[8px] duration-300">Events</a></li>
+          <li class="px-[16px] hover:bg-[#35695D]"><a href="#" class="block text-[#424E60] hover:text-white font-mono font-semibold py-[8px] duration-300">Testimoinial</a></li>
+          <button class="bg-[#35695D] text-[14px] text-white py-[8px] px-[24px] font-bold font-mono border-2 border-[#35695D] hover:bg-transparent hover:text-[#424E60] hover:border-[#35695D] duration-300 mr-5 w-[300px] lg:w-auto lg:ml-[40px]">
             Make An Appoinment
           </button>
-        </nav>
-      </div>
+        </ul>
+        <button class="absolute top-[25px] right-[20px] lg:hidden">
+          <i onclick="Menu(this)" class="fa-solid fa-bars text-[30px] text-[#424E60]"></i>
+        </button>
+      </nav>
     </div>
   </header>
   <!-- header section end -->
 
 
 
-  <section class="py-[220px]">
-    <div class="w-[700px] mx-auto">
+  <section class="py-[220px] px-5 md:px-0">
+    <div class="w-full md:w-[700px] md:mx-auto">
       <div class="relative">
         <div class="h-[111px] w-[111px] leading-[111px] text-center bg-[#E7F8F2] rounded-full absolute -top-[120px] left-1/2 -translate-x-1/2">
           <i class="fa-solid fa-thumbs-up text-[#150845] text-[40px]"></i>
         </div>
       </div>
       <div class="">
-        <h1 class="text-[#132238] text-[60px] font-mono font-bold text-center">Thank You Jishan!</h1>
+        <h1 class="text-[#132238] text-[36px] sm:text-[48px] md:text-[60px] font-mono font-bold text-center">Thank You Jishan!</h1>
         <p class="text-center text-[#A5ACB5] font-bold font-mono">Your payment  has been  Successful. Transaction id: <span class="text-[#677294]">#465456</span></p>
         <p class="text-center text-[#A5ACB5] font-bold font-mono pt-[40px] pb-[30px]">You booked an appointment with Professor Dr.  Mahmudul Hasan Siddiqi Shiblee 
           on <span class="text-[#677294]">February 21,  at 02:00 PM</span></p>
@@ -85,29 +93,29 @@
 
   <!-- footer section start -->
   <footer class="bg-[#150845]">
-    <div class="container mx-auto">
-      <div class="py-[100px] flex justify-between items-center">
-        <div class="w-[740px]">
-          <h2 class="text-[40px] font-mono font-bold text-white leading-[48px]">Looking for a Ophthalmologist Doctor? Get in touch and let's chat!</h2>
+    <div class="container mx-auto px-5">
+      <div class="py-[80px] md:flex md:justify-between">
+        <div class="mb-[30px]">
+          <h2 class="text-[30px] font-mono font-bold text-white leading-[40px]">Looking for a Ophthalmologist Doctor? Get in touch and let's chat!</h2>
         </div>
-        <div class="w-[740px]">
+        <div class="">
           <p class="text-[18px] text-[#A5ACB5] font-mono mb-[32px]">Donec in bibendum risus. Cras eget imperdiet sapien. Donec sollicitudin maximus augue, non elementum quam ultrices non.</p>
-          <button class="bg-[#57FFAE] px-[32px] py-[16px] text-[#132238] font-mono font-bold">Get in touch <i class="fa-solid fa-arrow-right-long ml-[10px]"></i></button>
+          <button class="bg-[#57FFAE] px-[32px] py-[16px] text-[#132238] font-mono font-bold">Make an appoinment <i class="fa-solid fa-arrow-right-long ml-[10px]"></i></button>
         </div>
       </div>
       <div class="bg-[#2B384C] w-full h-[1px]"></div>
-      <div class="py-[100px] flex justify-between items-center">
-        <div class=" h-[100px] w-[200px] p-[20px] bg-[#fff]">
+      <div class="py-[80px] sm:flex sm:justify-between sm:flex-wrap">
+        <div class=" h-[100px] w-[200px] p-[20px] bg-[#fff] mb-[40px]">
           <a href="#" class="text-[24px] text-[#132238] leading-[26px] font-bold">MAHMUD <br> SHIBLI.</a>
         </div>
-        <div>
+        <div class="mb-[40px] sm:w-[48%] lg:w-[16%]">
           <h3 class="text-[18px] text-white font-mono font-medium uppercase mb-[20px]">Location</h3>
           <p class="text-[#C3C7CE] text-[14px] font-mono">C 287/6 Khilgaon, <br> 
             Dhaka 1319</p>
         </div>
-        <div>
+        <div class="mb-[40px] sm:w-[48%] lg:w-[30%]">
           <h3 class="text-[18px] text-white font-mono font-medium uppercase mb-[20px]">Quick Links</h3>
-          <ul class="flex gap-[20px]">
+          <ul class="lg:flex gap-[10px]">
             <li><a href="#" class="font-mono font-medium text-[#A5ACB5] hover:bg-[#57FFAE] hover:text-[#132238] py-[8px] px-[12px] duration-300">About</a></li>
             <li><a href="#" class="font-mono font-medium text-[#A5ACB5] hover:bg-[#57FFAE] hover:text-[#132238] py-[8px] px-[12px] duration-300">CV</a></li>
             <li><a href="#" class="font-mono font-medium text-[#A5ACB5] hover:bg-[#57FFAE] hover:text-[#132238] py-[8px] px-[12px] duration-300">Events</a></li>
@@ -115,9 +123,9 @@
             <li><a href="#" class="font-mono font-medium text-[#A5ACB5] hover:bg-[#57FFAE] hover:text-[#132238] py-[8px] px-[12px] duration-300">Contact</a></li>
           </ul>
         </div>
-        <div>
+        <div class="sm:w-[48%] lg:w-[25%]">
           <h3 class="text-[18px] text-white font-mono font-medium uppercase mb-[20px]">Follow me</h3>
-          <div class="bg-[#132238]">
+          <div class="bg-[#132238] w-[285px]">
             <a href="#"><i class="fa-brands fa-facebook p-[14px] text-white hover:bg-[#57FFAE] hover:text-[#132238] duration-300"></i></a>
             <a href="#"><i class="fa-brands fa-twitter p-[14px] text-white hover:bg-[#57FFAE] hover:text-[#132238] duration-300"></i></a>
             <a href="#"><i class="fa-brands fa-linkedin p-[14px] text-white hover:bg-[#57FFAE] hover:text-[#132238] duration-300"></i></a>
